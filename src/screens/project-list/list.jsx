@@ -11,6 +11,7 @@ export const List = ({ list, users }) => {
       </thead>
       <tbody>
         {
+
           list.map(project =>
             <tr key={project.id} >
               <td>{project.name}</td>

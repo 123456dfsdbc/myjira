@@ -1,6 +1,20 @@
 import React from 'react';
+import { User } from '../project-list/search-panel'
 
-export const List = ({ list, users }) => {
+interface Project {
+  id: string,
+  name: string,
+  personId: string,
+  pin: boolean
+  organization: string,
+}
+// 定义接口规范
+interface ListProps {
+  list: Project[], // 定义users为User类型的数组
+  users: User[],
+}
+
+export const List = ({ list, users }: ListProps) => {
   return (
     <table>
       <thead>
